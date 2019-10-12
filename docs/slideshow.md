@@ -10,10 +10,10 @@ October 2018
 
 <div class="image12">
     <div style="float:left;margin-right:5px;">
-        <img src="/img/loss.png" height="200" width="200"/>
+        <img src="img/loss.png" height="200"/>
     </div>
     <div style="float:left;margin-right:5px;">
-        <img class="middle-img" src="/img/sad.png"/ height="200" width="270"/>
+        <img class="middle-img" src="img/sad.png"/ height="200"/>
 </div>
 
 ---
@@ -42,7 +42,7 @@ Minimax is an algorithm that you can apply to two player *zero-sum* games with *
 
 <div class="image12">
     <div style="float:left;margin-right:5px;">
-        <img src="https://media.giphy.com/media/D2LspqlvLIXK0/giphy.gif" height="200" width="200"/>
+        <img src="https://media.giphy.com/media/D2LspqlvLIXK0/giphy.gif" height="200"/>
     <p style="text-align:center;">Maximizer</p>
     </div>
     <div style="float:left;margin-right:5px;">
@@ -57,7 +57,9 @@ The maximizer is assumed to make optimal moves to maximizer their payoff. The mi
 
 ## Implementation looks like this
 
-![minimax](/img/minimax.png)
+
+<img src="img/minimax.png" height="300"/>
+
 
 ---
 
@@ -101,6 +103,7 @@ def minimax(game, maximizingPlayer):
 
 > This is the game I modelled to beat my friends in
 
-![camelup](/img/game_screen.png)
+<img src="img/game_screen.png" height="300"/>
+
 
 `https://github.com/michael-gracie/camelup`
