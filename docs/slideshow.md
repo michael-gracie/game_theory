@@ -1,24 +1,26 @@
 
-# How not to lose at tic tac toe
+## How not to lose at tic tac toe
 
 Michael Gracie
 
-October 2018
+October 2019
 
 ---
-## Have you ever lost?
+### Have you ever lost?
 
-<div class="image12">
-    <div style="float:left;margin-right:5px;">
+<!-- .slide: class="center" -->
+
+<div class="image12" align="center">
+    <div style="float:left;margin-right:5px;" align="center">
         <img src="img/loss.png" height="200"/>
     </div>
-    <div style="float:left;margin-right:5px;">
+    <div style="float:left;margin-right:5px;" align="center">
         <img class="middle-img" src="img/sad.png"/ height="200"/>
 </div>
 
 ---
 
-## Apply game theory to beat your friends at games
+### Apply game theory to beat your friends at games
 
 
 ![Rage](https://media.giphy.com/media/s0FsE5TsEF8g8/giphy.gif)
@@ -27,7 +29,7 @@ Lets use **tic tac toe** as an example
 
 ---
 
-## Basics of concepts of a game
+### Basics of concepts of a game
 
 - *Agent* - The people making decisions within a game
 - *State* - Information about who's decision it is within the game
@@ -35,47 +37,44 @@ Lets use **tic tac toe** as an example
 
 ---
 
-## Minimax Algorithm
+### Minimax Algorithm
 
-Minimax is an algorithm that you can apply to two player *zero-sum* games with *perfect information*. Within the game you have
+Minimax is an algorithm that you can apply to two player *zero-sum* games with *perfect information*. Within the game you have a:
 
 
 <div class="image12">
     <div style="float:left;margin-right:5px;">
         <img src="https://media.giphy.com/media/D2LspqlvLIXK0/giphy.gif" height="200"/>
-    <p style="text-align:center;">Maximizer</p>
+    <p style="text-align:center;">Maximizer, the maximizer is assumed to make optimal moves to maximizer their payoff.</p>
     </div>
     <div style="float:left;margin-right:5px;">
         <img class="middle-img" src="https://i.pinimg.com/originals/6c/e4/45/6ce445a5b3d6bc9217963ce2402f49f7.gif"/ height="200" width="200"/>
-    <p style="text-align:center;">Minimizer</p>
+    <p style="text-align:center;">Minimizer, the minimizer is assumed to make optimal moves to minimize the payoff of the maximizer</p>
 </div>
 
-
-The maximizer is assumed to make optimal moves to maximizer their payoff. The minimizer is assumed to make optimal moves to minimize the payoff of the maximizer.
-
 ---
 
-## Implementation looks like this
+### Implementation looks like this
 
 
-<img src="img/minimax.png" height="300"/>
+<img src="img/minimax.png" height="500"/>
 
 
 ---
 
-## In pseudo-code
+### In pseudo-code
 
 ```python
 def minimax(game, maximizingPlayer):
     if game.done:
         return payoff
     if maximizingPlayer:
-        value = −∞
+        value = -10000
         for move in game:
             value = max(value, minimax(move(game), FALSE))
         return value
     else:
-        value = +∞
+        value = 10000
         for move in game:
             value = min(value, minimax(move(game), True))
         return value
@@ -83,7 +82,7 @@ def minimax(game, maximizingPlayer):
 
 ---
 
-## Alpha Beta Pruning
+### Alpha Beta Pruning
 
 >  Implementation that stops searching a branch when a worse payoff is guaranteed
 
@@ -91,19 +90,18 @@ def minimax(game, maximizingPlayer):
 
 ---
 
-## What else is there
+### What else is there
 
 - **Expectiminimax** - `Minimax` with chance included
-- **Multi Agent Utilit** - A game where we assume each agent wants to maximize their payoff
+- **Multi Agent Utility** - A game where we assume each agent wants to maximize their payoff
 - **Monte Carlo Tree Search** - Algorithim specializing in complex trees
 
 ---
 
-## Camelup
+### Camelup
 
-> This is the game I modelled to beat my friends in
+This is the game I modelled to beat my friends in
 
 <img src="img/game_screen.png" height="300"/>
 
-
-`https://github.com/michael-gracie/camelup`
+###### `https://github.com/michael-gracie/camelup`
