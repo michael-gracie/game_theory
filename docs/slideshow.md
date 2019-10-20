@@ -6,26 +6,11 @@ Michael Gracie
 October 2019
 
 ---
-### Have you ever lost?
 
-<!-- .slide: class="center" -->
-
-<div class="image12" align="center">
-    <div style="float:left;margin-right:5px;" align="center">
-        <img src="img/loss.png" height="200"/>
-    </div>
-    <div style="float:left;margin-right:5px;" align="center">
-        <img class="middle-img" src="img/sad.png"/ height="200"/>
-</div>
-
----
-
-### Apply game theory to beat your friends at games
+### Apply game theory to beat your friends!
 
 
 ![Rage](https://media.giphy.com/media/s0FsE5TsEF8g8/giphy.gif)
-
-Lets use **tic tac toe** as an example
 
 ---
 
@@ -41,16 +26,10 @@ Lets use **tic tac toe** as an example
 
 Minimax is an algorithm that you can apply to two player *zero-sum* games with *perfect information*. Within the game you have a:
 
-
-<div class="image12">
-    <div style="float:left;margin-right:5px;">
-        <img src="https://media.giphy.com/media/D2LspqlvLIXK0/giphy.gif" height="200"/>
-    <p style="text-align:center;">Maximizer, the maximizer is assumed to make optimal moves to maximizer their payoff.</p>
-    </div>
-    <div style="float:left;margin-right:5px;">
-        <img class="middle-img" src="https://i.pinimg.com/originals/6c/e4/45/6ce445a5b3d6bc9217963ce2402f49f7.gif"/ height="200" width="200"/>
-    <p style="text-align:center;">Minimizer, the minimizer is assumed to make optimal moves to minimize the payoff of the maximizer</p>
-</div>
+| Maximizer     | Minimizer    |
+| :-------------: | :-------------: |
+| Assumed to make optimal moves to maximizer their payoff | Assumed to make optimal moves to minimize the payoff of the maximizer |
+|<img src="https://media.giphy.com/media/D2LspqlvLIXK0/giphy.gif" height="100"/>|<img src="https://i.pinimg.com/originals/6c/e4/45/6ce445a5b3d6bc9217963ce2402f49f7.gif" height="100"/>|
 
 ---
 
@@ -94,7 +73,7 @@ def minimax(game, maximizingPlayer):
 
 - **Expectiminimax** - `Minimax` with chance included
 - **Multi Agent Utility** - A game where we assume each agent wants to maximize their payoff
-- **Monte Carlo Tree Search** - Algorithim specializing in complex trees
+- **Monte Carlo Tree Search** - Pruning algorithm specializing in complex trees
 
 ---
 

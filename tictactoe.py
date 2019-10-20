@@ -1,6 +1,26 @@
 import numpy as np
 
+def init_board():
+    """Creates the tic tac toe board
+
+    Returns
+    -------
+    np.array
+    """
+    return np.full((3, 3), ' ')
+
 def show_board(board):
+    """Return string that visualizes the board
+
+    Parameters
+    ----------
+    board : np.arrray
+        Numpy array representing the board
+
+    Returns
+    -------
+    str
+    """
     output = ''
     first_line = True
     for line in board:
@@ -24,6 +44,19 @@ def show_board(board):
     return output
 
 def row_equal(row):
+    """Checks if all values in a list are the same
+
+    Parameters
+    ----------
+    row : list
+        Sequence of 3 within tic tac toe board
+
+    Returns
+    -------
+    bool
+        True is the list is the same
+
+    """
     if len(set(row)) == 1 and ' ' not in row:
         return True
 
@@ -41,4 +74,17 @@ def check_winner(board):
     return None
 
 def available_moves(board):
+    """List available moves
+
+    Parameters
+    ----------
+    board : np.array
+        Tic Tac Toe board
+
+    Returns
+    -------
+    list
+        List of potential spots
+
+    """
     return np.argwhere(board == ' ')
